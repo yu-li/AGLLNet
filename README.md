@@ -1,5 +1,4 @@
 <h2 align="center">AGLLNet: Attention Guided Low-light Image Enhancement (IJCV 2021) </h2>
-
 This is the test code for  “Attention Guided Low-light Image Enhancement with a Large Scale Low-light Simulation Dataset” in IJCV 2021, by [Feifan Lv](https://lvfeifan.github.io/), [Yu Li](yu-li.github.io), and  [Feng Lu](http://shi.buaa.edu.cn/lufeng/).
 
 
@@ -8,37 +7,48 @@ This is the test code for  “Attention Guided Low-light Image Enhancement with 
 
 ## Requirements ##
 
-- [x] python 3  
+- [x] python 3.5  
+
 - [x] Tensorflow 1.6.0
+
 - [x] Keras 2.2.0
-- [x] Opencv-python 3.4.2
+
+- [x] imageio
+
+- [x] opencv
+
+  
 
 ## Usage ##
 
 #### Testing
 
-To quickly test your own low-light images with our model, you can just run through
+You can put you image into the folder `input` and run
 
 ```shell
-cd main
-python test.py -i <input folder> -r <output folder> -m <model name>
+cd AGLLNet
+python run_agllnet.py
 ```
 
-By default, the code takes the data in the "../input/" folder, loads the "Syn_img_lowlight_withnoise.h5" model and saves results in the "../result/" folder.  Please read the code to see other parameter settings. 
+The results will be stored in the folder `output`.
+
+
 
 #### Training:
 
-Training code will NOT be provided this time.
+Training code will *NOT* be provided this time.
+
+
 
 
 ## Model
 
-- [x] TBD.h5  (This model is trained using synthetic lowlight images based on Poisson noise model. It is using for enhancement and denoising simultaneously.)
+- [x] AgLLNet.h5  (This model is newly trained for general low light enhancement. It is not strictly the one used in our IJCV paper).
 
   
 ## Bibtex
 
-If you use this code for your research, please cite our paper.
+If you use this code for your research, please consider star this repo and cite our paper.
 
  ```
  @article{lv2021attention,
